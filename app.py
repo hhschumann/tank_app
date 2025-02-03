@@ -28,8 +28,7 @@ def process_image(image_path):
     result = bust(image_path, network="ResNet")
 
     max_key = max(result, key=result.get)
-    max_value = result[max_key].astype(float)
-    print(round(max_value,2))
+    max_value = result[max_key].astype(float) * 100
 
     height, width, _ = frame.shape
 
@@ -51,7 +50,7 @@ if __name__=="__main__":
             temp_file.write(input_file.read())
             input_file_path = temp_file.name
 
-    if st.button('Start Demo'):
+    if st.button('Run Model'):
         col1, col2 = st.columns(2)
         org_frame = col1.empty()
         ann_frame = col2.empty()
