@@ -4,3 +4,4 @@ opencv-python==4.11.0.86
 numpy==1.23.5
 keras==2.8.0
 tensorflow==2.8.0rc0
+protobuf==3.20.0
